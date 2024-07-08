@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MessagesController } from './controller/messages.controller';
-import { MessagesService } from './service/messages.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { MESSAGES_PACKAGE_NAME, MESSAGES_SERVICE_NAME } from '../../../proto/messages';
+import { MESSAGES_PACKAGE_NAME, MESSAGES_SERVICE_NAME } from 'proto/messages';
 
 @Module({
   imports: [
@@ -19,6 +18,6 @@ import { MESSAGES_PACKAGE_NAME, MESSAGES_SERVICE_NAME } from '../../../proto/mes
     ]),
   ],
   controllers: [MessagesController],
-  providers: [MessagesService],
+  providers: [],
 })
 export class MessagesModule {}
